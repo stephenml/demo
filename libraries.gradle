@@ -2,7 +2,14 @@ dependencies {
     compile (
             /** spring */
             'org.springframework:spring-webmvc:4.0.6.RELEASE',
+            'org.springframework:spring-context-support:4.0.6.RELEASE',
 
-            'javax.servlet:jstl:1.2'
+            /** jstl */
+//            'javax.servlet:jstl:1.2',
+
+            /** apache */
+            'org.apache.velocity:velocity:1.7',
+            'org.apache.velocity:velocity-tools:2.0'
     )
 }
+
