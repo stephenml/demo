@@ -7,13 +7,29 @@ dependencies {
             /** spring */
             'org.springframework:spring-webmvc:4.0.6.RELEASE',
             'org.springframework:spring-context-support:4.0.6.RELEASE',
-
-            /** jstl */
-//            'javax.servlet:jstl:1.2',
+            'org.springframework:spring-tx:4.0.6.RELEASE',
+            'org.springframework:spring-jdbc:4.0.6.RELEASE',
+            'org.aspectj:aspectjweaver:1.7.4',
 
             /** apache */
             'org.apache.velocity:velocity:1.7',
-            'org.apache.velocity:velocity-tools:2.0'
+            'org.apache.velocity:velocity-tools:2.0',
+
+            /** mysql */
+            'mysql:mysql-connector-java:5.1.31',
+
+            /** mybatis */
+            'org.mybatis:mybatis:3.2.7',
+            'org.mybatis:mybatis-spring:1.2.2',
+
+            /** alibaba */
+            'com.alibaba:druid:1.0.4',
+            'com.alibaba:fastjson:1.1.41',
+
+            /** jackson */
+            'com.fasterxml.jackson.core:jackson-core:2.5.1',
+            'com.fasterxml.jackson.core:jackson-databind:2.5.1',
+            'com.fasterxml.jackson.core:jackson-annotations:2.5.0'
     )
 }
 

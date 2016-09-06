@@ -12,3 +12,7 @@
 ## Commit 3
 
 * 集成seajs、backbone等前端框架
+
+## Commit 4
+
+* 集成mybatis

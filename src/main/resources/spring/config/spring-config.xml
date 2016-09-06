@@ -7,10 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ml.stephen.demo.*"/>
+    <context:component-scan base-package="ml.stephen.*"/>
 
     <!-- 引入其他文件 -->
-    <import resource="classpath:spring/core/spring-core-common.xml" />
+    <import resource="classpath:spring/core/spring-core-common.xml"/>
+    <import resource="classpath:spring/core/spring-core-database.xml"/>
+    <import resource="classpath:spring/core/spring-core-service.xml"/>
+
+    <!-- 开发配置文件 -->
+    <import resource="classpath:spring/config/spring-develop-config.xml"/>
 
 </beans>
 
