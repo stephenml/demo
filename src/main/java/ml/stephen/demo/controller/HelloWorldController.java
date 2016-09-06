@@ -11,7 +11,7 @@ import java.util.Map;
  * Created by Stephen on 16/6/27.
  */
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = "/demo")
 public class HelloWorldController {
 
     @Autowired
@@ -23,6 +23,6 @@ public class HelloWorldController {
         model.put("title", helloWorldService.getTitle());
         model.put("msg", helloWorldService.getMsg());
 
-        return "index";
+        return "demo/index";
     }
 }

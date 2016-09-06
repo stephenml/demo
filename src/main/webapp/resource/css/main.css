@@ -1,0 +1,58 @@
+body,div,dl,dt,dd,ul,ol,li,p,h1,h2,h3,h4,h5,h6,input,tr,td,table,figure,mark,button,input,textarea {
+    padding:0;
+    margin:0
+}
+body {
+    font:14px arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color:#666
+}
+img {
+    display:block;
+    border:0
+}
+table {
+    border:0;
+    border-collapse:collapse;
+    border-spacing:0
+}
+a {
+    color:#666;
+    outline:none;
+    text-decoration:none
+}
+ul,li {
+    list-style-type:none
+}
+em,i {
+    font-style:normal
+}
+.container {
+    height:100%;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0
+}
+.header {
+    position:relative;
+    height:150px;
+    z-index:500;
+    background-color: aqua
+}
+.content {
+    position:relative;
+    height:500px;
+    z-index:500;
+    background-color: blue
+}
+.footer {
+    position:relative;
+    height:200px;
+    z-index:500;
+    background-color: cornflowerblue
+}
+.main {
+    position:relative;
+    width:100%;
+    height:100%
+}

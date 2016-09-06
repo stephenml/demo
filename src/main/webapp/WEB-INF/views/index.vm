@@ -1,8 +1,21 @@
-<html>
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="zh-CN"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh-CN"> <!--<![endif]-->
     <head>
-        <title>$!{title}</title>
+        <meta charset="utf-8" />
+        <title>Demo</title>
+        <link rel="stylesheet" href="resource/css/main.css"/>
     </head>
     <body>
-        $!{msg}
+        <!-- container -->
+        <div id="container" class="container">
+            <div id="header" class="header"></div>
+            <div id="content" class="content"></div>
+            <div id="footer" class="footer"></div>
+        </div>
+        <!-- container end-->
+        <script type="text/javascript" src="$!{ctx}/resource/js/modules/common/all.js"></script>
+        #seajs("root", ["main/main"])
     </body>
 </html>

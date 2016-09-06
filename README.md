@@ -8,3 +8,7 @@
 
 * 集成velocity视图解析器
 * 修改jdk版本为1.8
+
+## Commit 3
+
+* 集成seajs、backbone等前端框架

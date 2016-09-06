@@ -1,4 +1,8 @@
 dependencies {
+    providedCompile (
+            'javax.servlet:servlet-api:2.5'
+    )
+
     compile (
             /** spring */
             'org.springframework:spring-webmvc:4.0.6.RELEASE',

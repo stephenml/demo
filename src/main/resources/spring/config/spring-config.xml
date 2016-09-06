@@ -9,5 +9,8 @@
 
     <context:component-scan base-package="ml.stephen.demo.*"/>
 
+    <!-- 引入其他文件 -->
+    <import resource="classpath:spring/core/spring-core-common.xml" />
+
 </beans>
 

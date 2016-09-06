@@ -7,6 +7,12 @@
 
     <display-name>demo</display-name>
 
+    <!-- 项目模式 -->
+    <context-param>
+        <param-name>spring.profiles.default</param-name>
+        <param-value>develop</param-value>
+    </context-param>
+
     <!-- Session start -->
     <session-config>
         <session-timeout>60</session-timeout>

@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ml.stephen.demo.*"/>
+    <context:component-scan base-package="ml.stephen.*"/>
 
     <!-- jsp视图解析器 start -->
     <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
@@ -22,14 +22,23 @@
 
     <mvc:annotation-driven/>
 
+    <!-- 静态资源不拦截 -->
+    <mvc:default-servlet-handler/>
+
     <!-- velocity视图解析器 start -->
-    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-        <property name="cache" value="false"/>
+    <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="order" value="1"/>
+        <property name="viewClass" value="ml.stephen.core.web.VelocityLayoutView"/>
         <property name="contentType" value="text/html; charset=UTF-8"/>
         <property name="prefix" value=""/>
         <property name="suffix" value=".vm"/>
-        <!--<property name="toolboxConfigLocation" value="/velocity/toolbox.xml"/>-->
+        <property name="toolboxConfigLocation" value="/velocity/toolbox.xml"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="allowSessionOverride" value="true"/>
+        <property name="requestContextAttribute" value="context"/>
+        <property name="layoutUrl" value="layout/layout.vm"/>
     </bean>
     <!-- velocity视图解析器 end -->
 
