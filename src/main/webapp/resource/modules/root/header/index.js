@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
     var MenuListView = require('./view-menu-list.js');
 
-    return new (Marionette.LayoutView.extend({
+    var HeaderView = Marionette.LayoutView.extend({
 
         className : 'header-inner',
         template : _.template(require('./tpl/index.tpl.html')),
@@ -14,7 +14,7 @@ define(function(require, exports, module) {
             'menu' : '#menu'
         },
         initialize: function () {
-            app.view.header.show(this);
+
         },
         onShow : function () {
             var _this = this;
@@ -36,5 +36,9 @@ define(function(require, exports, module) {
             var $target = $(event.currentTarget);
             $target.addClass('active');
         }
-    }))();
+    });
+
+    exports.init = function () {
+        app.view.header.show(new HeaderView());
+    }
 });

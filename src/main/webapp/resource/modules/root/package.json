@@ -3,7 +3,6 @@
         "output" : {
             "relative" : [
             	"main/main.js",
-                "header/index.js",
 
                 "index/index.js",
                 "message/index.js",

@@ -29,6 +29,6 @@
         </div>
         <!-- GitHub end -->
         <script type="text/javascript" src="$!{ctx}/resource/js/modules/common/all.js"></script>
-        #seajs("root", ["main/main", "header/index"])
+        #seajs("root", ["main/main"])
     </body>
 </html>

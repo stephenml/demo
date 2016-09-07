@@ -14,7 +14,10 @@ define(function(require, exports, module) {
 		}
 	}))();
 
+	/** 加载路由 */
 	require('./router.js');
+	/** 加载页眉 */
+	require('../header/index.js').init();
 
 	Backbone.history.start();
 	
