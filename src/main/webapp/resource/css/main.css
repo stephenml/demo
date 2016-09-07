@@ -68,16 +68,32 @@ em,i {
 }
 .content {
     position:relative;
-    height:300px;
+    min-height: 600px;
     z-index:500;
 }
 .footer {
-    position:relative;
-    height:60px;
-    z-index:500;
-    text-align:center;
-    line-height:60px;
-    font-size:35px;
+    background-color: #616C75;
+    height: 60px;
+}
+.footer-inner {
+    font-family: Verdana;
+    font-size: 14px;
+    color: #9CA4AB;
+    text-align: center;
+    padding-top: 10px;
+}
+p.copyright {
+    line-height: 1;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+p a {
+    color: #77a0ab;
 }
 .m {
     position:relative;

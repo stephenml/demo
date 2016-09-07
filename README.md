@@ -18,7 +18,7 @@
 
     ml.stephen : mybatis xml文件
     properties : 配置目录
-    spring : sping配置目录
+    spring : spring配置目录
     mybatis : mybatis配置目录
     velocity : velocity配置目录
 

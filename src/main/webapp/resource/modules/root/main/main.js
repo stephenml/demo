@@ -18,6 +18,8 @@ define(function(require, exports, module) {
 	require('./router.js');
 	/** 加载页眉 */
 	require('../header/index.js').init();
+	/** 加载页脚 */
+	require('../footer/index.js').init();
 
 	Backbone.history.start();
 	
