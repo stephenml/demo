@@ -4,12 +4,15 @@ version '1.0.1'
 apply plugin: 'java'
 apply plugin: 'war'
 
-apply from: 'libraries.gradle' // jar包
+apply from: 'libraries.gradle' /** jar */
+apply from: 'tasks.gradle' /** task */
 
-//sourceCompatibility = 1.7
+/** jdk版本 */
 sourceCompatibility = 1.8
+
+/** war包名称 */
+archivesBaseName = 'ROOT'
 
 repositories {
     mavenCentral()
 }
-

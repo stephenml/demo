@@ -1,0 +1,10 @@
+/** 发布war到target目录 */
+task release(overwrite: true, dependsOn: [war], description: 'Release WebApp') << {
+	copy{
+		from ("build/libs")
+		include "**/*.war", "**/*.jar"
+        into new File(rootProject.rootDir, 'target').getAbsolutePath() 
+    } 
+    
+    clean.execute()
+}

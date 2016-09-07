@@ -1,0 +1,14 @@
+{
+    "spm" : {
+        "output" : {
+            "relative" : [
+            	"main/main.js",
+
+                "index/index.js"
+            ]
+        },
+        "alias" : {
+
+        }
+    }
+}
