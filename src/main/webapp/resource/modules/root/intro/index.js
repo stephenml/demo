@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
 
-    var IndexView = Marionette.LayoutView.extend({
+    var IntroView = Marionette.LayoutView.extend({
 
         className : 'm',
         template : _.template(require('./tpl/index.tpl.html')),
@@ -20,6 +20,6 @@ define(function(require, exports, module) {
     });
 
     exports.init = function () {
-        app.view.content.show(new IndexView());
+        app.view.content.show(new IntroView());
     }
 });

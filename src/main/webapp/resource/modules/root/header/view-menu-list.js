@@ -1,11 +1,11 @@
 define(function(require, exports, module) {
 
-    var ItemView = require('./view-item.js');
+    var MenuItemView = require('./view-menu-item.js');
 
     return Marionette.CollectionView.extend({
         
-        className : 'main',
-        childView : ItemView,
+        className : 'm',
+        childView : MenuItemView,
 
         emptyView : require('../common/view-empty.js'),
         emptyViewOptions : {html: '无数据'}

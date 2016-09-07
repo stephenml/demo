@@ -3,8 +3,14 @@
         "output" : {
             "relative" : [
             	"main/main.js",
+                "header/index.js",
 
-                "index/index.js"
+                "index/index.js",
+                "message/index.js",
+                "intro/index.js",
+                "docs/index.js",
+                "downloads/index.js",
+                "about/index.js"
             ]
         },
         "alias" : {

@@ -3,8 +3,8 @@ define(function(require, exports, module) {
     return Marionette.ItemView.extend({
 
         tagName : 'li',
-        className : '',
-        template : _.template(require('./tpl/item.tpl.html')),
+        className : 'menu-item',
+        template : _.template(require('./tpl/menu-item.tpl.html')),
 
         events : {
 

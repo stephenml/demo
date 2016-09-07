@@ -1,8 +1,8 @@
 package ml.stephen.website.root.index.mapper;
 
 import ml.stephen.core.mybatis.annotation.MyBatisMapper;
-import ml.stephen.core.mybatis.page.PageList;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,6 +11,10 @@ import java.util.Map;
 @MyBatisMapper
 public interface IndexMapper {
 
-    public PageList<Map<String, Object>> list();
+    /**
+     * 菜单列表
+     * @return
+     */
+    public List<Map<String, Object>> menuList();
 
 }

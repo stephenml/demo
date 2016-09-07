@@ -18,25 +18,24 @@ public class IndexController {
     @Autowired
     private IndexService indexService;
 
+    /**
+     * 首页
+     * @return
+     */
     @RequestMapping(value = "index.html", method = RequestMethod.GET)
     public String index() {
         return "index";
     }
 
     /**
-     * 获取列表 分页
-     * @param pageNum
-     * @param pageSize
+     * 菜单列表
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = "list", method = RequestMethod.GET)
+    @RequestMapping(value = "menu", method = RequestMethod.GET)
     @ResponseBody
-    public Object list(
-            @RequestParam(required = false, defaultValue = "1") Integer pageNum,
-            @RequestParam(required = false, defaultValue = "10") Integer pageSize
-    ) throws Exception {
-        return this.indexService.list(pageNum, pageSize);
+    public Object list() throws Exception {
+        return this.indexService.menuList();
     }
 
 }

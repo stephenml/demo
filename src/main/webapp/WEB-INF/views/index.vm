@@ -5,17 +5,30 @@
     <head>
         <meta charset="utf-8" />
         <title>Demo</title>
-        <link rel="stylesheet" href="resource/css/main.css"/>
+        <link rel="stylesheet" href="resource/css/main.min.css"/>
     </head>
     <body>
         <!-- container -->
         <div id="container" class="container">
-            <div id="header" class="header">页眉</div>
-            <div id="content" class="content"></div>
-            <div id="footer" class="footer">页脚</div>
+            <div id="header" class="header">
+                <!-- 页眉 -->
+            </div>
+            <div id="content" class="content">
+                <!-- 内容 -->
+            </div>
+            <div id="footer" class="footer">
+                <!-- 页脚 -->
+            </div>
         </div>
         <!-- container end-->
+        <!-- GitHub -->
+        <div>
+            <a href="https://github.com/stephenml/demo" target="_blank">
+                <img style="position: absolute; top: -7px; right: -10px; border: 0" src="https://i.alipayobjects.com/e/201211/1dbSqT9ykm.png" width="149" height="149" alt="Fork me on GitHub">
+            </a>
+        </div>
+        <!-- GitHub end -->
         <script type="text/javascript" src="$!{ctx}/resource/js/modules/common/all.js"></script>
-        #seajs("root", ["main/main"])
+        #seajs("root", ["main/main", "header/index"])
     </body>
 </html>

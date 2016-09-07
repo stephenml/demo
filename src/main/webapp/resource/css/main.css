@@ -34,13 +34,37 @@ em,i {
     top:0
 }
 .header {
-    position:relative;
-    height:80px;
-    z-index:500;
-    text-align:center;
-    line-height:80px;
-    font-size:35px;
-    border-bottom:1px solid #666666
+    height: 80px;
+    background: -moz-linear-gradient(top, #626D76, #323A41);
+    background: -webkit-gradient(linear, center top, center bottom, from(#626D76), to(#323A41));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#626D76, endColorstr=#323A41)";
+    background-color: #626D76;
+}
+.header-inner {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+}
+.nav {
+    position: absolute;
+    left: 140px;
+    top: 40px;
+    list-style: none;
+}
+.nav li {
+    float: left;
+}
+.nav li.active a, .nav li a:hover {
+    color: #BCD3C4;
+    text-decoration: none;
+}
+.nav li a {
+    text-shadow: 1px 1px 0 #323A41;
+    color: #9CA4AB;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'PT Sans';
+    padding: 7px 13px 7px 13px;
 }
 .content {
     position:relative;
@@ -54,12 +78,15 @@ em,i {
     text-align:center;
     line-height:60px;
     font-size:35px;
-    border-top:1px solid #666666
 }
-.main {
+.m {
     position:relative;
     width:100%;
     height:100%
+}
+.center {
+    text-align: center;
+    margin-top: 20px;
 }
 .help-tip {
     text-align:center;

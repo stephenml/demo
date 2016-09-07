@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,24 +20,12 @@ public class IndexService {
     private IndexMapper indexMapper;
 
     /**
-     * 获取列表 分页
-     * @param pageNum
-     * @param pageSize
+     * 菜单列表
      * @return
      * @throws Exception
      */
-    public Map<String, Object> list(Integer pageNum, Integer pageSize) throws Exception {
-        Map<String, Object> rtn = new HashMap<String, Object>();
-
-        PageHelper.startPage(pageNum, pageSize);
-        PageList<Map<String, Object>> list = this.indexMapper.list();
-
-        rtn.put("pageNum", list.getPageNum());
-        rtn.put("pageSize", list.getPageSize());
-        rtn.put("totalCount", list.getTotal());
-        rtn.put("data", list.getResult());
-
-        return rtn;
+    public List<Map<String, Object>> menuList() throws Exception {
+        return this.indexMapper.menuList();
     }
 
 }
