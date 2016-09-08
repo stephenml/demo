@@ -8,5 +8,6 @@
 # Folders #
 .gradle/
 .idea/
+build/
 classes/
 src/test/
