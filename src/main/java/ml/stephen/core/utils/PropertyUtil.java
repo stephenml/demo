@@ -8,6 +8,7 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 /**
+ * Created by Stephen on 16/9/6.
  * 配置文件工具类
  * 
  * <pre>
@@ -36,9 +37,9 @@ public class PropertyUtil extends PropertyPlaceholderConfigurer {
 		if (properties == null) {
 			properties = paramProperties;
 		} else {
-			Enumeration enums = paramProperties.propertyNames();
-			while (enums.hasMoreElements()) {
-				String key = (String) enums.nextElement();
+			Enumeration enumeration = paramProperties.propertyNames();
+			while (enumeration.hasMoreElements()) {
+				String key = (String) enumeration.nextElement();
 				properties.setProperty(key, paramProperties.getProperty(key));
 			}
 		}

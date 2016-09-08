@@ -3,8 +3,8 @@ package ml.stephen.core.mybatis.page;
 import java.util.List;
 
 /**
+ * Created by Stephen on 16/9/7.
  * 对PageList<E>结果进行包装
- * 
  */
 @SuppressWarnings("rawtypes")
 public class PageInfo {

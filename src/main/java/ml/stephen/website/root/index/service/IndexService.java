@@ -1,6 +1,7 @@
 package ml.stephen.website.root.index.service;
 
-import ml.stephen.website.root.index.mapper.IndexMapper;
+import ml.stephen.constant.ServiceConstants;
+import ml.stephen.core.cache.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +15,15 @@ import java.util.Map;
 public class IndexService {
 
     @Autowired
-    private IndexMapper indexMapper;
+    protected RedisCache redisCache;
 
     /**
-     * 菜单列表
+     * 从缓存中获取menu
      * @return
-     * @throws Exception
      */
-    public List<Map<String, Object>> menuList() throws Exception {
-        return this.indexMapper.menuList();
+    public List<Map<String, Object>> getMenus() throws Exception {
+        Object menus = this.redisCache.getValue(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_MENU);
+        return (List<Map<String,Object>>) menus;
     }
 
 }

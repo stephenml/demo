@@ -2,12 +2,4 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="ml.stephen.website.root.index.mapper.IndexMapper">
 
-	<!-- 菜单列表 -->
-	<select id="menuList" resultType="java.util.Map">
-		SELECT
-			*
-		FROM
-			menu
-	</select>
-
 </mapper>

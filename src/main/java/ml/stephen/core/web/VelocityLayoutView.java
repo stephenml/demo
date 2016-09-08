@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Created by Stephen on 16/9/6.
+ */
 public class VelocityLayoutView extends org.springframework.web.servlet.view.velocity.VelocityLayoutView {
 
 	private static ToolContext toolContext;
@@ -71,4 +74,5 @@ public class VelocityLayoutView extends org.springframework.web.servlet.view.vel
 
 		return attributes;
 	}
+
 }

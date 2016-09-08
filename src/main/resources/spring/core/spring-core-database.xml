@@ -35,4 +35,5 @@
 		p:sqlSessionFactoryBeanName="sqlSessionFactory"
 		p:annotationClass="ml.stephen.core.mybatis.annotation.MyBatisMapper"
 		p:basePackage="ml.stephen.**.mapper"/>
+
 </beans>

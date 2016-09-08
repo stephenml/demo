@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Created by Stephen on 16/9/7.
  * Mybatis - 分页对象
- * 
  */
 public class PageList<E> extends ArrayList<E> {
 	private static final long serialVersionUID = -8881596055974041175L;

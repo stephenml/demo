@@ -34,7 +34,7 @@ public class IndexController {
     @RequestMapping(value = "menu", method = RequestMethod.GET)
     @ResponseBody
     public Object list() throws Exception {
-        return this.indexService.menuList();
+        return this.indexService.getMenus();
     }
 
 }

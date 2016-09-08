@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Properties;
 
 /**
+ * Created by Stephen on 16/9/7.
  * Mybatis - 通用分页拦截器
- *
  */
 @SuppressWarnings({ "rawtypes", "unchecked" })
 @Intercepts(@Signature(type = Executor.class, method = "query", args = { MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class }))
