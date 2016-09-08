@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
 	return Marionette.ItemView.extend ({
 
-		className: 'main',
+		className: 'm',
 		
 		template: function(model) {
 			if (model.img) {

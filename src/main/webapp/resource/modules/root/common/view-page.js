@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
     return Marionette.LayoutView.extend({
 
-        className : 'main',
+        className : 'm',
         template : _.template(require('./tpl/page.tpl.html')),
 
         triggers : {
