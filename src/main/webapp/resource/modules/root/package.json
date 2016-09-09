@@ -13,7 +13,9 @@
             ]
         },
         "alias" : {
+            "jquery" : "jquery",
 
+            "remarkable" : "remarkable"
         }
     }
 }

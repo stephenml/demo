@@ -13,7 +13,8 @@
 ### src/main/java
 
     ml.stephen.core : 核心目录
-    包含: 
+    
+    包含 :
         Redis相关(cache)
         MyBatis注解自动加载(mybatis)
 
