@@ -1,8 +1,8 @@
 define(function(require, exports, module) {
 
-    var MessageView = Marionette.LayoutView.extend({
+    var MessagesView = Marionette.LayoutView.extend({
 
-        className : 'm',
+        className : 'content-inner',
         template : _.template(require('./tpl/index.tpl.html')),
 
         events : {
@@ -20,6 +20,6 @@ define(function(require, exports, module) {
     });
 
     exports.init = function () {
-        app.view.content.show(new MessageView());
+        app.view.content.show(new MessagesView());
     }
 });

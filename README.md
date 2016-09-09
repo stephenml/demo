@@ -1,5 +1,3 @@
-**Java web demo http://stephen.ml/demo**
-
 # **一、项目文档**
 
 ## 1、部分目录说明
@@ -15,6 +13,9 @@
 ### src/main/java
 
     ml.stephen.core : 核心目录
+    包含: 
+        Redis相关(cache)
+        MyBatis注解自动加载(mybatis)
 
 ### src/main/resources
 

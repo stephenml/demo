@@ -7,9 +7,6 @@ define(function(require, exports, module) {
         className : 'header-inner',
         template : _.template(require('./tpl/index.tpl.html')),
 
-        events : {
-            'click .menu-item' : 'clickMenu'
-        },
         regions: {
             'menu' : '#menu'
         },
@@ -24,17 +21,17 @@ define(function(require, exports, module) {
                 success : function () {
                     /** 显示菜单 */
                     _this.menu.show(new MenuListView({collection: collection}));
+                    _this.setActiveMenu();
                 }
             });
         },
         /**
-         * 点击导航菜单
-         * @param event
+         * 设置选择的menu
          */
-        clickMenu : function (event) {
-            this.$el.find('.menu-item').removeClass('active');
-            var $target = $(event.currentTarget);
-            $target.addClass('active');
+        setActiveMenu : function () {
+            var hash = location.hash.replace(/\/.*/, '');
+            this.$el.find('#menu .menu-item a').removeClass('active');
+            this.$el.find('#menu .menu-item a[href="' + hash + '"]').addClass('active');
         }
     });
 

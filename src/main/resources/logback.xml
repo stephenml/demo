@@ -7,9 +7,9 @@
 
 	<!-- 常量配置 -->
 	<contextName>service</contextName>
-    <property name="log.level" value="INFO"/>
+	<property name="log.level" value="INFO"/>
 	<property name="log.level.sql" value="ERROR"/>
-    <property name="log.level.service" value="ERROR"/>
+	<property name="log.level.service" value="ERROR"/>
 	<property name="log.dir" value="/Users/Stephen/Documents/log"/>
 	<!--<property name="log.dir" value="/usr/www/demo/log"/>-->
 	<property name="log.pattern" value="%-6d{HH:mm:ss} %-6level %logger - %msg%n"/>

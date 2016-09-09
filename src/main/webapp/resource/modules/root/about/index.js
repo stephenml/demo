@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
     var AboutView = Marionette.LayoutView.extend({
 
-        className : 'm',
+        className : 'content-inner',
         template : _.template(require('./tpl/index.tpl.html')),
 
         events : {
