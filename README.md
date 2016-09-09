@@ -20,11 +20,11 @@
 
 ### src/main/resources
 
-    ml.stephen : mybatis xml文件
-    properties : 配置目录
-    spring : spring配置目录
-    mybatis : mybatis配置目录
-    velocity : velocity配置目录
+    ml.stephen : MyBatis XML文件
+    properties : 项目配置目录
+    spring : Spring配置目录
+    mybatis : MyBatis配置目录
+    velocity : Velocity配置目录
 
 ## 2、Seajs
 
@@ -37,6 +37,7 @@
 ### spm安装
 
     sudo npm install spm -g
+    sudo npm install spm-sea -g
     sudo npm install spm-chaos-build -g
 
 ## 3、Gradle
