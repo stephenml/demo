@@ -15,6 +15,7 @@ define(function(require, exports, module) {
         },
         onShow : function () {
             var _this = this;
+            app.tips.loading();
             var collection = new Backbone.Collection();
             collection.fetch({
                 url : ctx + '/menu',
@@ -22,6 +23,10 @@ define(function(require, exports, module) {
                     /** 显示菜单 */
                     _this.menu.show(new MenuListView({collection: collection}));
                     _this.setActiveMenu();
+                    /** 加延时是因为可能关不掉tip */
+                    setTimeout(function () {
+                        app.tips.close();
+                    }, 200);
                 }
             });
         },

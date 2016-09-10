@@ -8,6 +8,7 @@ seajs.config({
 
 		/** jQuery相关 */
 		'jquery' : 'jquery/jquery/1.12.0/jquery',
+		'jquery-poshytip' : 'jquery/jquery-poshytip/1.2/jquery-poshytip',
 
 		/** Markdown解析 */
 		'remarkable' : 'gallery/remarkable/remarkable'

@@ -9,7 +9,7 @@ define(function(require, exports, module) {
         events : {
 
         },
-        onShow : function() {
+        onShow : function () {
 
         }
     });

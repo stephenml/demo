@@ -7,7 +7,7 @@ define(function(require, exports, module) {
         className : 'm',
         childView : MenuItemView,
 
-        emptyView : require('../common/view-empty.js'),
-        emptyViewOptions : {html: '无数据'}
+        emptyView : app.emptyView,
+        emptyViewOptions : {text : '无数据'}
     });
 });

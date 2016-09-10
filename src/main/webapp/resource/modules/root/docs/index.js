@@ -15,6 +15,7 @@ define(function(require, exports, module) {
         },
         onShow : function () {
             var _this = this;
+            app.tips.loading();
 
             var url = 'https://raw.githubusercontent.com/stephenml/demo/master/README.md';
             $.get(url, function (result) {
@@ -31,6 +32,7 @@ define(function(require, exports, module) {
                     highlight: function (/*str, , lang*/) { return ''; }
                 });
                 _this.$el.find('.markdown-body').html(md.render(result));
+                app.tips.close();
             });
         }
     });

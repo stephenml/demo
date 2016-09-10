@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title>Java Web Demo</title>
         <link rel="stylesheet" href="resource/css/main.css"/>
+        <link rel="stylesheet" href="resource/css/font-awesome/css/font-awesome.css"/>
     </head>
     <body>
         <!-- container -->
