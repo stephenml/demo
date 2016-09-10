@@ -7,7 +7,10 @@ define(function(require, exports, module) {
         className : 'header-inner',
         template : _.template(require('./tpl/index.tpl.html')),
 
-        regions: {
+        regions : {
+            'menu' : '@ui.menu'
+        },
+        ui : {
             'menu' : '#menu'
         },
         initialize: function () {
@@ -18,7 +21,7 @@ define(function(require, exports, module) {
             app.tips.loading();
             var collection = new Backbone.Collection();
             collection.fetch({
-                url : ctx + '/menu',
+                url : ctx + '/menu/list',
                 success : function () {
                     /** 显示菜单 */
                     _this.menu.show(new MenuListView({collection: collection}));

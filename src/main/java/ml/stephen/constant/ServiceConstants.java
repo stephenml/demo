@@ -13,5 +13,6 @@ public interface ServiceConstants extends Constants {
     Integer CACHE_TABLE_DBINDEX = 1;
 
     String CACHE_TABLE_MENU = "table_menu";
+    String CACHE_TABLE_FRAMEWORK = "table_framework";
 
 }

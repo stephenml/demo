@@ -2,6 +2,7 @@ package ml.stephen.website.web.init.service;
 
 import ml.stephen.constant.ServiceConstants;
 import ml.stephen.core.cache.RedisCache;
+import ml.stephen.website.root.framework.service.FrameworkService;
 import ml.stephen.website.root.menu.service.MenuService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,8 @@ public class InitRedisService {
     private RedisCache redisCache;
     @Autowired
     private MenuService menuService;
+    @Autowired
+    private FrameworkService frameworkService;
 
     @Async
     public void asyncInit() throws Exception {
@@ -34,6 +37,7 @@ public class InitRedisService {
 
         this.redisCache.flushAllRetainSession();
         this.initMenu();
+        this.initFramework();
     }
 
     /**
@@ -45,6 +49,17 @@ public class InitRedisService {
 
         List<Map<String, Object>> menus = this.menuService.selectMenuList();
         this.redisCache.updateKey(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_MENU, menus, null);
+    }
+
+    /**
+     * 初始化framework
+     * @throws Exception
+     */
+    private void initFramework() throws Exception {
+        logger.debug("初始化表[framework], key : " + ServiceConstants.CACHE_TABLE_FRAMEWORK);
+
+        List<Map<String, Object>> frameworks = this.frameworkService.selectFrameworkList();
+        this.redisCache.updateKey(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_FRAMEWORK, frameworks, null);
     }
 
 }
