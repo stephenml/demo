@@ -8,10 +8,10 @@ define(function(require, exports, module) {
         events : {
 
         },
-        regions: {
+        regions : {
 
         },
-        initialize: function () {
+        initialize : function () {
 
         },
         onShow : function () {

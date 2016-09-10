@@ -54,17 +54,17 @@ h3 {
 }
 
 ::selection {
-    background: #2a79ff;
+    background: #008B8B;
     color: #b6bcb8;
 }
 
 ::-moz-selection {
-    background: #2a79ff;
+    background: #008B8B;
     color: #b6bcb8;
 }
 
 ::-webkit-selection {
-    background: #2a79ff;
+    background: #008B8B;
     color: #b6bcb8;
 }
 
@@ -75,6 +75,7 @@ h3 {
 
 .framework-list {
     margin-left: 3em;
+    overflow: hidden;
 }
 
 .framework-item {
@@ -82,15 +83,15 @@ h3 {
     width: 100px;
     height: 30px;
     padding: 16px;
+    color: #cccccc;
     font-size: 85%;
     cursor: pointer;
-    line-height: 2.4;
-    border-radius: 3px;
+    line-height: 2.35;
+    border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 20px;
     text-align: center;
-    font-weight: bold;
-    background-color: #f7f7f7;
+    background-color: #449d44;
 }
 
 .container {
@@ -168,19 +169,19 @@ h3 {
     color: #888;
 }
 
-.about-body {
+.inner-body {
     margin: 0px auto;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.about-line {
+.inner-line {
     border-bottom: 1px solid #E0E0E0;
     box-shadow: #FFF 0 1px;
     margin-bottom: 20px;
 }
 
-.about-line h2 {
+.inner-line h2 {
     padding: 0px;
     text-align: center;
     border-bottom: none;
@@ -194,13 +195,66 @@ h3 {
 
 .license {
     width: 780px;
-    min-height: 530px;
+    min-height: 480px;
     padding: 10px;
     border: 0px solid;
     resize: none;
     outline: none;
     border-radius: 5px;
     background-color: #f7f7f7;
+}
+
+.intro-body {
+    width: 800px;
+    margin: 0px auto;
+}
+
+.intro-body h3 {
+    margin: 0px;
+    text-align: center;
+}
+
+.intro-body ul li {
+    color: #888;
+    font-size: 1em;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    list-style-type: square;
+}
+
+.downloads-body {
+    width: 780px;
+    margin: 0px auto;
+}
+
+.download {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    line-height: 50px;
+    border: 0px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+}
+
+.download a {
+    color: #008B8B;
+    font-weight: normal;
+}
+
+.git-download {
+    float: right;
+    width: 70px;
+    height: 40px;
+    color: #ffffff !important;
+    margin-top: 5px;
+    line-height: 40px;
+    text-align: center;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: #449d44;
 }
 
 .footer {
