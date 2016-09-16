@@ -2,46 +2,37 @@ package ml.stephen.website.root.framework.service;
 
 import ml.stephen.constant.ServiceConstants;
 import ml.stephen.core.cache.RedisCache;
-import ml.stephen.website.root.framework.mapper.FrameworkMapper;
+import ml.stephen.dao.table.entity.Framework;
+import ml.stephen.dao.table.service.FrameworkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Stephen on 16/9/10.
  */
 @Service
-public class FrameworkService {
+public class MFrameworkService {
 
     @Autowired
-    private FrameworkMapper frameworkMapper;
+    private FrameworkService frameworkService;
     @Autowired
     protected RedisCache redisCache;
-
-    /**
-     * 框架列表
-     * @return
-     * @throws Exception
-     */
-    public List<Map<String, Object>> selectFrameworkList() throws Exception {
-        return this.frameworkMapper.selectFrameworkList();
-    }
 
     /**
      * 从缓存中获取framework
      * @return
      */
-    public List<Map<String, Object>> getFrameworks() throws Exception {
+    public List<Framework> getFrameworks() throws Exception {
         Object frameworks = this.redisCache.getValue(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_FRAMEWORK);
 
         if (null == frameworks) {
-            frameworks = this.selectFrameworkList();
+            frameworks = this.frameworkService.selectByExample(null); /** 获取所有框架列表 */
             this.redisCache.updateKey(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_FRAMEWORK, frameworks, null);
         }
 
-        return (List<Map<String,Object>>) frameworks;
+        return (List<Framework>) frameworks;
     }
 
 }

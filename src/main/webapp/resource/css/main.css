@@ -257,6 +257,278 @@ h3 {
     background-color: #449d44;
 }
 
+.messages-body {
+    width: 700px;
+    height: 650px;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    margin: 0px auto;
+}
+
+.messages-header {
+    height: 80px;
+    background-color: rgba(245,245,245,.7);
+}
+
+.messages-header .head {
+    float: left;
+}
+
+.messages-header .head img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.messages-header .name {
+    float: left;
+    height: 80px;
+    font-size: 1.25em;
+    line-height: 80px;
+}
+
+.messages-main {
+    height: 390px;
+    padding: 15px 15px 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.messages-main ul li {
+    position: relative;
+    font-size: 0;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    min-height: 68px;
+}
+
+.messages-user {
+    position: absolute;
+    left: 3px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.messages-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.messages-user cite {
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    width: 500px;
+    line-height: 24px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #999;
+    text-align: left;
+    font-style: normal;
+}
+
+.messages-user cite i {
+    padding-left: 10px;
+}
+
+.messages-text {
+    position: relative;
+    line-height: 22px;
+    margin-top: 25px;
+    padding: 10px 15px;
+    background-color: #eee;
+    border-radius: 3px;
+    color: #333;
+    word-break: break-all;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.messages-text:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: #eee transparent transparent;
+    overflow: hidden;
+    border-width: 10px;
+}
+
+.messages-own {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 60px;
+}
+
+.messages-own .messages-user{
+    left: auto;
+    right: 3px;
+}
+
+.messages-own .messages-user cite {
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+
+.messages-own .messages-user cite i {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.messages-own .messages-text{
+    margin-left: 0;
+    text-align: left;
+    background-color: #33DF83;
+    color: #fff;
+}
+
+.messages-own .messages-text:after {
+    left: auto;
+    right: -10px;
+    border-top-color: #33DF83;
+}
+
+.messages-input {
+    width: 100%;
+    border-top: 1px solid #F1F1F1;
+}
+
+.messages-tools {
+    position: relative;
+    padding: 0 8px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 0;
+}
+
+.messages-tools span {
+    position: relative;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.messages-tools span:hover {
+    color: #ccc;
+}
+
+.messages-textarea {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.messages-textarea textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 0 0;
+    height: 70px;
+    line-height: 20px;
+    border: none;
+    overflow: auto;
+    resize: none;
+    outline: none;
+    background: 0 0;
+}
+
+.messages-botton {
+    position: relative;
+    height: 46px;
+}
+
+.messages-send {
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.messages-send span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 32px;
+    margin-left: 5px;
+    padding: 0 20px;
+    background-color: #33DF83;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.messages-send span:active {
+    background-color: #20C870;
+}
+
+.messages-send span:hover {
+    background-color: #22D979;
+}
+
+.messages-send .messages-send-btn {
+    border-radius: 3px 0 0 3px;
+}
+
+.messages-send .messages-send-set {
+    position: relative;
+    width: 30px;
+    height: 32px;
+    margin-left: 0;
+    padding: 0;
+    border-left: 1px solid #65E7A3;
+    border-radius: 0 3px 3px 0;
+}
+
+.messages-edge {
+    top: 14px;
+    left: 9px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 6px;
+    border-style: dashed;
+    border-color: transparent;
+    border-top-style: solid;
+    border-top-color: #fff;
+}
+
+.set-menu {
+    left: auto;
+    right: 0;
+    top: 33px;
+    width: 180px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #E2E2E2;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px rgba(0,0,0,.1);
+}
+
+.set-menu li {
+    padding-right: 15px;
+    line-height: 28px;
+    position: relative;
+    padding-left: 15px;
+    font-size: 12px;
+}
+.set-menu li:hover {
+    background-color: #eee;
+}
+
 .footer {
     background-color: #616C75;
     height: 60px;

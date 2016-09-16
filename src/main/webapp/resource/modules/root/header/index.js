@@ -29,7 +29,7 @@ define(function(require, exports, module) {
                     /** 加延时是因为可能关不掉tip */
                     setTimeout(function () {
                         app.tips.close();
-                    }, 200);
+                    }, 500);
                 }
             });
         },

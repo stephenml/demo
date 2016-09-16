@@ -1,1 +1,44 @@
-开发中...
+<div class="inner-body">
+    <div class="inner-line">
+        <h2>聊天消息</h2>
+    </div>
+    <div class="messages-body">
+        <div class="messages-header">
+            <div class="head">
+                <img src=""/>
+            </div>
+            <div class="name"><%=window.userInfo.name %></div>
+        </div>
+        <div class="messages-main">
+            <!-- 消息列表 -->
+        </div>
+        <div class="messages-input">
+            <div class="messages-tools">
+                <span class="" title="选择表情"><i class="fa fa-smile-o"></i></span>
+                <span class="" title="上传图片"><i class="fa fa-picture-o"></i></span>
+                <span class="" title="上传文件"><i class="fa fa-folder-o"></i></span>
+            </div>
+            <div class="messages-textarea">
+                <textarea spellcheck="false"></textarea>
+            </div>
+            <div class="messages-botton">
+                <div class="messages-send">
+                    <span class="messages-send-btn">发送</span>
+                    <span class="messages-send-set">
+                        <em class="messages-edge"></em>
+                    </span>
+                    <ul class="set-menu" style="display: none;">
+                        <li>
+                            <i class="fa fa-check"></i>
+                            按Enter键发送消息
+                        </li>
+                        <li>
+                            <i class="fa fa-check"></i>
+                            按Ctrl+Enter键发送消息
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

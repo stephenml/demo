@@ -9,8 +9,12 @@ seajs.config({
 		/** jQuery相关 */
 		'jquery' : 'jquery/jquery/1.12.0/jquery',
 		'jquery-poshytip' : 'jquery/jquery-poshytip/1.2/jquery-poshytip',
+		'jquery-cookie' : 'jquery/jquery-cookie/1.4.1/jquery.cookie',
 
 		/** Markdown解析 */
-		'remarkable' : 'gallery/remarkable/remarkable'
+		'remarkable' : 'gallery/remarkable/1.6.0/remarkable.min',
+
+		/** 随机生成用户名 */
+		'nomen' : 'gallery/nomen/0.0.1/nomen.min'
     }
 });

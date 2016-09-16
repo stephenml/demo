@@ -2,8 +2,11 @@ package ml.stephen.website.web.init.service;
 
 import ml.stephen.constant.ServiceConstants;
 import ml.stephen.core.cache.RedisCache;
-import ml.stephen.website.root.framework.service.FrameworkService;
-import ml.stephen.website.root.menu.service.MenuService;
+import ml.stephen.dao.table.entity.Framework;
+import ml.stephen.dao.table.entity.Menu;
+import ml.stephen.dao.table.service.FrameworkService;
+import ml.stephen.dao.table.service.MenuService;
+import ml.stephen.website.root.framework.service.MFrameworkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +50,7 @@ public class InitRedisService {
     private void initMenu() throws Exception {
         logger.debug("初始化表[menu], key : " + ServiceConstants.CACHE_TABLE_MENU);
 
-        List<Map<String, Object>> menus = this.menuService.selectMenuList();
+        List<Menu> menus = this.menuService.selectByExample(null); /** 获取所有的菜单 */
         this.redisCache.updateKey(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_MENU, menus, null);
     }
 
@@ -58,7 +61,7 @@ public class InitRedisService {
     private void initFramework() throws Exception {
         logger.debug("初始化表[framework], key : " + ServiceConstants.CACHE_TABLE_FRAMEWORK);
 
-        List<Map<String, Object>> frameworks = this.frameworkService.selectFrameworkList();
+        List<Framework> frameworks = this.frameworkService.selectByExample(null); /** 获取所有框架列表 */
         this.redisCache.updateKey(ServiceConstants.CACHE_TABLE_DBINDEX, ServiceConstants.CACHE_TABLE_FRAMEWORK, frameworks, null);
     }
 

@@ -15,8 +15,11 @@
         "alias" : {
             "jquery" : "jquery",
             "jquery-poshytip" : "jquery-poshytip",
+            "jquery-cookie" : "jquery-cookie",
 
-            "remarkable" : "remarkable"
+            "remarkable" : "remarkable",
+
+            "nomen" : "nomen"
         }
     }
 }

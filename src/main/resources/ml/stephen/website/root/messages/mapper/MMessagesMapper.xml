@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ml.stephen.website.root.messages.mapper.MMessagesMapper">
+
+	<!-- 消息列表 -->
+	<select id="selectMessagesList" resultType="java.util.Map">
+		SELECT
+			*
+		FROM
+			messages
+		WHERE
+			<if test="startId == null">
+				id > (SELECT MAX(id) FROM messages) - 10
+			</if>
+			<if test="startId != null">
+				id >= #{startId}
+			</if>
+	</select>
+
+</mapper>

@@ -1,0 +1,15 @@
+ <div class="messages-user">
+    <img src="<%=head %>">
+    <%
+        if (window.userInfo.uuid === uuid) {
+    %>
+        <cite><i><%=commit_date %></i><%=name %></cite>
+    <%
+        } else {
+    %>
+        <cite><%=name %><i><%=commit_date %></i></cite>
+    <%
+        }
+    %>
+</div>
+<div class="messages-text"><%=content %></div>

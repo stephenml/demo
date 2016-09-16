@@ -44,6 +44,9 @@ dependencies {
             'org.logback-extensions:logback-ext-spring:0.1.1',
             'commons-logging:commons-logging:1.2',
 
+            /** google */
+            'com.google.guava:guava:18.0',
+
             /** maven仓库中没有的jar包 */
             fileTree(dir: "${rootProject.projectDir}/libs", include: '*.jar')
     )
