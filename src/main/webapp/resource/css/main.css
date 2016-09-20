@@ -651,8 +651,11 @@ p a {
     position: relative;
     width: 32px;
     height: 32px;
-    background: url("../images/loading.gif") no-repeat 0 0;
     z-index: 1000;
+}
+
+.tip-loading .loading .fa{
+    position: initial;
 }
 
 .tip-loading .tip-bd {

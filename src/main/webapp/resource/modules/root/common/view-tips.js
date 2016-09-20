@@ -43,7 +43,7 @@ define(function(require, exports, module) {
             fade : true,
             slide : true,
             showlayer : true,
-            timeOnScreen : 2000, /** 显示时间 */
+            timeOnScreen : 200000, /** 显示时间 */
             content : '<i class="fa fa-check-circle"></i>提示信息!'
         };
 
@@ -146,29 +146,16 @@ define(function(require, exports, module) {
      * @description 需要手动调用close方法关闭
      * @param options
      *          配置
-     *          type : loading类型 image、text(默认)
      *          target : 目标元素 jquery
      *          msg : 显示文本
      *          zIndex: 默认无
      */
     var loading = function (options) {
-        var config = {
-            type : 'text',
-            msg : '正在加载 . . .'
-        };
-
-        config = $.extend(config, options, {
+        var config = $.extend({}, options, {
             timeOnScreen : 0,
             className : 'tip-loading',
-            content : ''
+            content : '<div class="loading"><i class="fa fa-spinner fa-pulse"></i></div>正在加载 . . .'
         });
-
-        config.content = '<div class="loading"></div>';
-        if (config.type === 'image') { /** 图片loading */
-            config.content = '<div class="loading"></div>';
-        } else if (config.type === 'text' && config.msg) {
-            config.content += config.msg;
-        }
 
         if (config.target) _tmp = config.target;
 

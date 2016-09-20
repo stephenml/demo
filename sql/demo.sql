@@ -44,6 +44,6 @@ CREATE TABLE `messages` (
   `content` text NOT NULL COMMENT '消息内容',
   `commit_date` datetime NOT NULL COMMENT '发送时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 SET FOREIGN_KEY_CHECKS = 1;
